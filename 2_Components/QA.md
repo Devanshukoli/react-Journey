@@ -17,21 +17,21 @@
 - **Function Components**.
     - A **function component** is basically a **JavaScript function** that returns a **React element(JSX)**.
     - _They_ are used when you _don't need to managestate or use lifecyle methods_.
-    -```javascript
+    ```javascript
         function Greeting(props) {
             return <h1>Helo, {props.name}!</h1>;
         }
-        ```
+     ```
     - Alternatively, you can use an **arrow function** to define a _function component_.
-    -```javascript
+    ```javascript
         const Greeting = (props) => {
             return <h1>Hello, {props.name}!</h1>
         }
-        ```
+     ```
     - To use a _component_ later, you first _export_ it, by doing something like this :
     ```javascript
         export default Greeting;
-        ```
+    ```
     - Then, when you want to use that, particular component, you _import_ it, by doing something like this : 
     ```javascript
         import Greeting from './Greeting';
@@ -43,7 +43,7 @@
                 </div>
             )
         }
-        ```
+     ```
     - **NOTE** : _The name of the component should always start with a capital letter_.
 - **Class Components**.
     - 
