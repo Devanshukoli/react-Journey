@@ -28,3 +28,5 @@
     -[Passing props to Component](https://react.dev/learn/passing-props-to-a-component)
     -[Functional Components in React part 1](https://www.geeksforgeeks.org/reactjs-functional-components/)
     -[Functional Components in React part 2](https://www.robinwieruch.de/react-function-component/)
+
+- **NOTE** :_Most of the time, React's on screen error message will help you find where the problem is_.

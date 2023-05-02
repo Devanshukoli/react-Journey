@@ -45,5 +45,43 @@
         }
      ```
     - **NOTE** : _The name of the component should always start with a capital letter_.
+    - **[Learn more](https://www.robinwieruch.de/react-function-component/)**
 - **Class Components**.
-    - 
+    - These are more complex component, that uses ES6 classes.
+    - _Class Components_ have a state that can be updated and can use lifecycle methods such as  **`componentDidMount`** and  **`componentWillUnmount`**.
+    ```javascript
+        class Greeting extends React.Component {
+            render() {
+                return <h1>Hello, {this.props.name} </h1>
+            }
+        }
+    ```
+    - example of _count_ in class component :
+    ```javascript
+        class Counter extends React.Component {
+            constructor(props) {
+                super(props)
+                this.state = { count : 0}
+            }
+
+            increment() {
+                this.setState({ count: this.state.count + 1})
+            }
+
+            render() {
+                return (
+                    <div>
+                        <p> Count : {this.state.count} </p>
+                    </div>
+                )
+            }
+        }
+    ```
+    - in this example, the `Counter` component has a state that keeps track of the count. The `increment()` method updates the count and calls the `setState()` method to trigger a re-render of the UI.
+
+    - Different from functional components, class components must have an additional `render()` method for return _JSX_.
+    - We use _class components_ because of **`state`**, In older version of _React_, it was not possible to use **state** inside _functional components_.
+    - It takes _props_(in the constructor) if needed. 
+    
+- We needed functional components for rendering UI only, whereas we'd use class components for data management and some additional operations(like life-cycle methods.)
+- This has changed with introduction of **React Hooks**, and now we can also use states in functional components as well. 
